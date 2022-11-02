@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+$width__mobile: 375px;
+$width__desktop: 1440px;
+
+$color__primary--pale-blue: hsl(225, 100%, 94%);
+$color__primary--bright-blue: hsl(245, 75%, 52%);
+$color__primary--bright-blue-op: hsla(245, 75%, 52%, 0.35);
+
+$color__secondary--purple: #756CF1;
+
+$color__neutral--very-pale-blue: hsl(225, 100%, 98%);
+$color__neutral--desaturated-blue: hsl(224, 23%, 55%);
+$color__neutral--dark-blue: hsl(223, 47%, 23%);
+
+$typography__font-size: 16px;
+
+$typography__font-family: "Outfit", sans-serif;
+
+$typography__font-weight--medium: 500;
+$typography__font-weight--bold: 700;
+$typography__font-weight--black: 900;
+
+@mixin mobile {
+  @media screen and (max-width: $width__mobile) {
+    @content;
+  }
+}

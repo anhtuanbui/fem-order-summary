@@ -1,0 +1,132 @@
+@import "../shared/variables.scss";
+
+main {
+  width: $width__desktop;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+
+  @include mobile {
+    width: $width__mobile;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+  }
+}
+
+.card {
+  width: 25rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem -1rem $color__primary--bright-blue-op;
+
+  &__image {
+    background-color: white;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    padding: 1rem 2.5rem;
+    background-color: white;
+    text-align: center;
+
+    @include mobile {
+        padding: 1rem 1.5rem;
+    }
+  }
+
+  &__title {
+    font-size: 1.75rem;
+    font-weight: $typography__font-weight--black;
+    color: $color__neutral--dark-blue;
+    letter-spacing: -0.05rem;
+  }
+
+  &__text {
+    font-weight: $typography__font-weight--medium;
+    color: $color__neutral--desaturated-blue;
+    margin-bottom: 1.5rem;
+    line-height: 1.75rem;
+  }
+
+  &__plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color__neutral--very-pale-blue;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+
+    &--left {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      img {
+        margin-right: 1rem;
+      }
+
+      &-info {
+        p {
+          margin: 0.5rem 0;
+        }
+
+        &-annual {
+          font-weight: $typography__font-weight--bold;
+        }
+
+        &-price {
+          color: $color__neutral--desaturated-blue;
+        }
+      }
+    }
+
+    &--right {
+      a {
+        font-weight: $typography__font-weight--bold;
+        color: $color__primary--bright-blue;
+        &:hover {
+          color: $color__secondary--purple;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    background-color: $color__primary--bright-blue;
+    border: none;
+    color: white;
+    height: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem $color__primary--bright-blue-op;
+    transition: 0.25s;
+    font-weight: $typography__font-weight--bold;
+
+    &:hover {
+      background-color: $color__secondary--purple;
+    }
+  }
+
+  &__cancel-btn {
+    color: $color__neutral--desaturated-blue;
+    font-size: 0.825rem;
+    font-weight: $typography__font-weight--black;
+    cursor: pointer;
+
+    &:hover {
+      color: $color__neutral--dark-blue;
+    }
+  }
+}

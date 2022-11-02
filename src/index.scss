@@ -1,0 +1,22 @@
+@import './shared/variables.scss';
+
+body, html {
+  margin: 0;
+  font-family: $typography__font-family;
+  font-size: $typography__font-size;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-color: $color__primary--pale-blue;
+  background-repeat: repeat-x;
+
+  @include mobile {
+    background-image: url(./images/pattern-background-mobile.svg);
+    font-size: 14px;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
